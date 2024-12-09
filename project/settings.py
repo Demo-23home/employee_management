@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # External Modules
+    "rest_framework",
+    # Internal Apps
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -163,3 +167,6 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
+
+
+AUTH_USER_MODEL = "accounts.User"
