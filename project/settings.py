@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # External Modules
     "rest_framework",
+    "drf_spectacular",
     # Internal Apps
     "accounts",
 ]
@@ -170,3 +172,10 @@ REST_FRAMEWORK = {
 
 
 AUTH_USER_MODEL = "accounts.User"
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Ecommerce",
+    "DESCRIPTION": "this is an ecommerce fullstack project",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
